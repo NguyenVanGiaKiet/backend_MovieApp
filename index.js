@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const movieRoutes = require('./routes/movieRoutes');
 const usersRoutes = require('./routes/usersRoutes');
+const moviePopularRoutes = require('./routes/moviePopularRoutes');
+const movieTopRatedRoutes = require('./routes/movieTopRatedRoutes');
 
 dotenv.config();
 const app = express();
@@ -20,6 +22,8 @@ app.use(express.json());
 // Routes
 app.use('/movies', movieRoutes);
 app.use('/users', usersRoutes);
+app.use('/popular', moviePopularRoutes);
+app.use('/toprated', movieTopRatedRoutes);
 
 // Lắng nghe cổng
 app.listen(PORT, () => {

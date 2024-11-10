@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 const topRatedMovieSchema = new mongoose.Schema({
-  id: String,
   name_movie: String,
   time: String,
   director: String,
